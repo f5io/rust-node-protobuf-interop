@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package paybase.pip.getPolicy;
+
+message Input {
+  oneof type {
+    string id = 1;
+    string name = 2;
+  }
+}
+
+message Grant {
+  string source = 1;
+  string filter = 2;
+  string select = 3;
+}
+
+message Output {
+  string id = 1;
+  string name = 2;
+  repeated Grant grants = 3;
+}

@@ -1,0 +1,23 @@
+[package]
+name = "proto"
+version = "0.1.0"
+authors = ["joe"]
+edition = "2018"
+
+[dependencies]
+prost = "0.4.0"
+bytes = "0.4.12"
+futures = "0.1"
+env_logger = "0.6"
+derive_more = "0.14"
+prost-derive = "0.4.0"
+actix = "0.8.2"
+actix-web = "1.0.0"
+actix-protobuf = "0.4.0"
+
+[build-dependencies]
+prost-build = "0.4.0"
+
+[profile.release]
+opt-level = 'z'  # Optimize for size.
+lto = true
